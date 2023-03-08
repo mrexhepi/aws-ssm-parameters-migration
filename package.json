@@ -1,0 +1,16 @@
+{
+  "name": "ssm-param-migration",
+  "version": "1.0.1",
+  "description": "Migrate multiple SSM parameters(encrypted and not encrypted) between AWS accounts",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Muharrem Rexhepi",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-ssm": "^3.282.0",
+    "dotenv": "^16.0.3"
+  }
+}

@@ -1,9 +1,9 @@
 # Project Description
-This mini project is designed to retrieve parameters from the AWS SSM Parameter Store and save them to a JSON file. <br>
+This mini-project will help on AWS SSM parameters migration from an AWS account to another AWS account, in a quick way.
+This is designed to retrieve parameters from the AWS SSM Parameter Store and save them to a JSON file. <br>
 Then, it uploads those parameters to a new AWS account using AWS SDK for Node.js.<br>
-The script defines two sets of AWS credentials and region - one for the source account and another for the destination account.<br>
-It initializes the AWS SDK for Node.js SSM client for both accounts using the respective credentials.<br>
-<br><br>
+The script defines two sets of AWS credentials and region - one for the source account and another for the target account.<br>
+<br>
 
 # How to Use
 Ensure that you have Node.js installed on your local machine.<br>
@@ -30,8 +30,8 @@ npm run start
 <br>
 The script will retrieve parameters from the source account, save them to a JSON file, and upload the parameters to the destination account.<br>
  The JSON file will be saved in the current working directory with the name parameters.json.
-
- Example:A parameter under path `/api/dev` saved in parameters.json file will look as below: <br>
+<br>
+ Example: A parameter under path `/api/dev` saved in parameters.json file will look as below: <br>
 
  ```
 
@@ -46,5 +46,5 @@ The script will retrieve parameters from the source account, save them to a JSON
   ```
 
 
-  ## Please keep in mind to use least privilege approach on creating AWS keys for this project usage
-  ## The only permissions you need is AWS SSM  limited to the actions:(GetParametersByPath,PutParameter,Encrypt,Decrypt)
+  ### ***Please keep in mind to use least privilege approach on creating AWS keys for this project usage***
+  ### ***The only AWS IAM permissions you need is AWS SSM  limited to the actions:(GetParametersByPath,PutParameter,Encrypt,Decrypt)***

@@ -1,5 +1,5 @@
 # Project Description
-This mini-project will help on AWS SSM parameters migration from an AWS account to another AWS account, in a quick way.
+This mini-project will help to quickly migrate a numerous AWS SSM parameters  from an AWS account to another AWS account.<br>
 This is designed to retrieve parameters from the AWS SSM Parameter Store and save them to a JSON file. <br>
 Then, it uploads those parameters to a new AWS account using AWS SDK for Node.js.<br>
 The script defines two sets of AWS credentials and region - one for the source account and another for the target account.<br>

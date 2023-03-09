@@ -49,3 +49,31 @@ The script will retrieve parameters from the source account, save them to a JSON
 
   ### ***Please keep in mind to use least privilege approach on creating AWS keys for this project usage***
   ### ***The only AWS IAM permissions you need is AWS SSM  limited to the actions:(GetParametersByPath,PutParameter,Encrypt,Decrypt)***
+<br>
+Policy to be applied on the AWS users for both source and target AWS accounts: 
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "kms:Decrypt",
+                "kms:Encrypt"
+            ],
+            "Resource": "ARN of you AWS managed KMS -> aws/ssm"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ssm:PutParameter", ## Put parameter - This can be deleted at the source aws account permission,as we don't have to add any parameter in there
+                "ssm:GetParametersByPath",
+                "ssm:GetParameters",
+                "ssm:GetParameter"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
